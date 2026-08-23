@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Animal Facts Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <div class="logo">🐾</div>
+    <h1>Animal Facts</h1>
+    <p class="subtitle">Create an account, sign in, and discover something wild.</p>
+
+    <section id="authPanel">
+      <div class="tabs">
+        <button id="loginTab" class="tab active" type="button">Sign in</button>
+        <button id="registerTab" class="tab" type="button">Sign up</button>
+      </div>
+      <form id="authForm">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="password">Password</label>
+        <input id="password" type="password" minlength="8" required placeholder="At least 8 characters">
+        <button id="submitButton" class="primary" type="submit">Sign in</button>
+      </form>
+    </section>
+
+    <section id="factPanel" class="hidden">
+      <p id="welcome" class="welcome"></p>
+      <div class="fact-box"><span>Random animal fact</span><p id="fact"></p></div>
+      <button id="newFact" class="primary" type="button">Show another fact</button>
+      <button id="logout" class="secondary" type="button">Sign out</button>
+    </section>
+
+    <p id="message" role="alert" aria-live="polite"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
